@@ -27,6 +27,7 @@ export default class App extends Component {
 			console.log(this.state.weatherData);
 			return <MyWeather wdata={this.state.weatherData} />;
 		}
+
 		return "";
 	}
 }

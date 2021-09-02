@@ -76,17 +76,17 @@ export class MyWeather extends Component {
 					</p>
 					<Animate
 						play
-						duration="1.5"
+						duration="1"
 						easeType="ease-Out"
 						start={{
-							transform: "rotate(0deg)",
+							transform: `rotate(${weatherArray.wind.deg - 90}deg)`,
 							width: "12px",
 							fontSize: "18px",
 							marginLeft: "140px",
 							marginTop: "-34px",
 						}}
 						end={{
-							transform: `rotate(240deg)`,
+							transform: `rotate(${weatherArray.wind.deg}deg)`,
 							width: "12px",
 							fontSize: "18px",
 							marginLeft: "140px",
