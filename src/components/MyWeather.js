@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Animate } from "react-simple-animate";
+import FormInput from "./FormInput";
 
 import "./myweather.css";
 
@@ -35,6 +36,9 @@ export class MyWeather extends Component {
 			case windDegree <= 359:
 				windDirection = "NW";
 				break;
+			default:
+				windDirection = "N";
+				break;
 		}
 		if (weatherArray.main.temp >= 15) endColor = "#FFCC00";
 		if (weatherArray.main.temp >= 25) endColor = "#FF0000";
@@ -67,7 +71,7 @@ export class MyWeather extends Component {
 						Wind:
 						<br />
 						<strong>
-							{weatherArray.wind.speed} {windDirection}
+							{weatherArray.wind.speed} m/s {windDirection}
 						</strong>
 					</p>
 					<Animate
@@ -78,14 +82,14 @@ export class MyWeather extends Component {
 							transform: "rotate(0deg)",
 							width: "12px",
 							fontSize: "18px",
-							marginLeft: "105px",
+							marginLeft: "140px",
 							marginTop: "-34px",
 						}}
 						end={{
 							transform: `rotate(240deg)`,
 							width: "12px",
 							fontSize: "18px",
-							marginLeft: "105px",
+							marginLeft: "140px",
 							marginTop: "-34px",
 						}}>
 						↑
@@ -137,6 +141,7 @@ export class MyWeather extends Component {
 							}}></Animate>
 					</div>
 				</div>
+				<FormInput />
 			</section>
 		);
 	}
