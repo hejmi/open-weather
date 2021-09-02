@@ -17,13 +17,6 @@ section p {
 .wind-p {
 	padding-left: 1.2rem;
 }
-.temperature-gradient {
-	margin-left: 2rem;
-	width: 200px;
-	height: 10px;
-	background: rgb(14, 0, 255);
-	background: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(255, 241, 0, 1) 30%, rgba(255, 0, 0, 1) 100%);
-}
 .temp-outline {
 	background-image: url("../temp_outline.png");
 	background-size: 80px;
@@ -31,7 +24,7 @@ section p {
 	width: 80px;
 	height: 231px;
 	left: 15rem;
-	top: 1rem;
+	top: 4rem;
 }
 .input-city-form {
 	padding: 30px;
