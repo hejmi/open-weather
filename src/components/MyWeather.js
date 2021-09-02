@@ -8,7 +8,7 @@ export class MyWeather extends Component {
 		let windDirection = "N";
 		let weatherArray = this.props.wdata;
 		let windDegree = weatherArray.wind.deg;
-		let sunRise = weatherArray.sys.sunrise;
+		/*let sunRise = weatherArray.sys.sunrise;*/
 
 		switch (true) {
 			case windDegree === 0:

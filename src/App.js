@@ -7,7 +7,6 @@ export default class App extends Component {
 	getWeather = async (city) => {
 		if (!city) city = "gothenburg";
 		const apiKey = weatherApi;
-
 		const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`).then((response) => {
 			if (response.status === 404) {
 				alert("City is not valid");
