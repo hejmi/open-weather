@@ -57,9 +57,9 @@ export class MyWeather extends Component {
 						<br />
 						<br />
 						<span className="smaller">
-							Todays highest temperature: <strong>{weatherArray.main.temp_max}°C</strong>
+							Highest temperature: <strong>{weatherArray.main.temp_max}°C</strong>
 							<br />
-							Todays lowest temperature: <strong>{weatherArray.main.temp_min}°C</strong>
+							Lowest temperature: <strong>{weatherArray.main.temp_min}°C</strong>
 						</span>
 						<br />
 					</p>
@@ -70,6 +70,26 @@ export class MyWeather extends Component {
 							{weatherArray.wind.speed} {windDirection}
 						</strong>
 					</p>
+					<Animate
+						play
+						duration="1.5"
+						easeType="ease-Out"
+						start={{
+							transform: "rotate(0deg)",
+							width: "12px",
+							fontSize: "18px",
+							marginLeft: "105px",
+							marginTop: "-34px",
+						}}
+						end={{
+							transform: `rotate(240deg)`,
+							width: "12px",
+							fontSize: "18px",
+							marginLeft: "105px",
+							marginTop: "-34px",
+						}}>
+						↑
+					</Animate>
 					<div className="temp-outline">
 						<Animate
 							play
