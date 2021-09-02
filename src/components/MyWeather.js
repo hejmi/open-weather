@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Animate } from "react-simple-animate";
-import FormInput from "./FormInput";
-
 import "./myweather.css";
 
 export class MyWeather extends Component {
@@ -146,7 +144,6 @@ export class MyWeather extends Component {
 							}}></Animate>
 					</div>
 				</div>
-				<FormInput />
 			</section>
 		);
 	}
