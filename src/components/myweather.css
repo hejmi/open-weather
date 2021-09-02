@@ -14,6 +14,9 @@ section p {
 .smaller {
 	font-size: 0.75rem;
 }
+.wind-p {
+	padding-left: 1.2rem;
+}
 .temperature-gradient {
 	margin-left: 2rem;
 	width: 200px;

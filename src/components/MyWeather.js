@@ -8,8 +8,10 @@ export class MyWeather extends Component {
 	render() {
 		let endColor = "#0000FF";
 		let windDirection = "N";
-		const weatherArray = this.props.wdata;
+		let weatherArray = this.props.wdata;
 		let windDegree = weatherArray.wind.deg;
+		let sunRise = weatherArray.sys.sunrise;
+
 		switch (true) {
 			case windDegree === 0:
 			case windDegree === 360:
@@ -71,7 +73,9 @@ export class MyWeather extends Component {
 						Wind:
 						<br />
 						<strong>
-							{weatherArray.wind.speed} m/s {windDirection}
+							<span className="wind-p">
+								{weatherArray.wind.speed} m/s {windDirection}
+							</span>
 						</strong>
 					</p>
 					<Animate
@@ -82,18 +86,19 @@ export class MyWeather extends Component {
 							transform: `rotate(${weatherArray.wind.deg - 90}deg)`,
 							width: "12px",
 							fontSize: "18px",
-							marginLeft: "140px",
-							marginTop: "-34px",
+							marginLeft: "2.1rem",
+							marginTop: "-35px",
 						}}
 						end={{
 							transform: `rotate(${weatherArray.wind.deg}deg)`,
 							width: "12px",
 							fontSize: "18px",
-							marginLeft: "140px",
-							marginTop: "-34px",
+							marginLeft: "2.1rem",
+							marginTop: "-35px",
 						}}>
 						↑
 					</Animate>
+					<p>{/*Date(sunRise)*/}</p>
 					<div className="temp-outline">
 						<Animate
 							play
