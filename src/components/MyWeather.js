@@ -151,7 +151,7 @@ export class MyWeather extends Component {
 							}}></Animate>
 					</div>
 				</div>
-				<div className="weather-background"><img src={`weather-icons/${iconCode}.png`} alt="weather" /></div>
+				<div className="weather-background" style={{backgroundImage:`url("weather-icons/${iconCode}.jpg")`}} ></div>
 			</section>
 		);
 	}
