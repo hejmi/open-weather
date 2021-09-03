@@ -11,6 +11,7 @@ export class MyWeather extends Component {
 		let windDegree = weatherArray.wind.deg;
 		let sunRise = new Date(weatherArray.sys.sunrise*1000);
 		let sunSet = new Date(weatherArray.sys.sunset*1000);
+		let iconCode = weatherArray.weather[0].icon;
 		switch (true) {
 			case windDegree === 0:
 			case windDegree === 360:
@@ -150,6 +151,7 @@ export class MyWeather extends Component {
 							}}></Animate>
 					</div>
 				</div>
+				<div className="weather-background"><img src={`weather-icons/${iconCode}.png`} alt="weather" /></div>
 			</section>
 		);
 	}

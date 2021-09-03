@@ -47,3 +47,25 @@ grid-row-gap: 0px;
 padding: 1rem 2rem;
 }
 
+.weather-background {
+	position: absolute;
+	z-index: -10;
+	opacity: 0.2;
+	top: -80px;
+	left: -80px;
+	animation-name: weather-animation;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+@keyframes weather-animation {
+	0% {
+		left: -325px;
+	}
+	100% {
+		left: 400px;
+	}
+}
+
