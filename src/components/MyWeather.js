@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Animate } from "react-simple-animate";
+import * as Icon from "react-bootstrap-icons";
 import "./myweather.css";
 
 export class MyWeather extends Component {
@@ -8,8 +9,8 @@ export class MyWeather extends Component {
 		let windDirection = "N";
 		let weatherArray = this.props.wdata;
 		let windDegree = weatherArray.wind.deg;
-		/*let sunRise = weatherArray.sys.sunrise;*/
-
+		let sunRise = new Date(weatherArray.sys.sunrise*1000);
+		let sunSet = new Date(weatherArray.sys.sunset*1000);
 		switch (true) {
 			case windDegree === 0:
 			case windDegree === 360:
@@ -96,7 +97,12 @@ export class MyWeather extends Component {
 						}}>
 						↑
 					</Animate>
-					<p>{/*Date(sunRise)*/}</p>
+					<div className="sun">
+						<div className="sunrise-icon"><Icon.Sunrise/></div>
+						<div className="sunset-icon"><Icon.SunsetFill/></div>
+						<div className="sunrise-time">{sunRise.getHours()}:{sunRise.getMinutes()}</div>
+						<div className="sunset-time">{sunSet.getHours()}:{sunRise.getMinutes()}</div>
+					</div>
 					<div className="temp-outline">
 						<Animate
 							play

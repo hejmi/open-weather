@@ -37,3 +37,13 @@ section p {
 .button {
 	margin-left: 10px;
 }
+
+.sun {
+display: grid;
+grid-template-columns: repeat(2, 3rem);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+padding: 1rem 2rem;
+}
+
