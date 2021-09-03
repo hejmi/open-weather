@@ -63,9 +63,14 @@ padding: 1rem 2rem;
 @keyframes weather-animation {
 	0% {
 		left: -325px;
+		opacity: 0.2;
+	}
+	80% {
+		opacity: 0.2;
 	}
 	100% {
 		left: 400px;
+		opacity: 0;
 	}
 }
 
