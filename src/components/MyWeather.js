@@ -9,8 +9,8 @@ export class MyWeather extends Component {
 		let windDirection = "N";
 		let weatherArray = this.props.wdata;
 		let windDegree = weatherArray.wind.deg;
-		let sunRise = new Date(weatherArray.sys.sunrise*1000);
-		let sunSet = new Date(weatherArray.sys.sunset*1000);
+		let sunRise = new Date(weatherArray.sys.sunrise * 1000);
+		let sunSet = new Date(weatherArray.sys.sunset * 1000);
 		let iconCode = weatherArray.weather[0].icon;
 		switch (true) {
 			case windDegree === 0:
@@ -99,10 +99,18 @@ export class MyWeather extends Component {
 						↑
 					</Animate>
 					<div className="sun">
-						<div className="sunrise-icon"><Icon.Sunrise/></div>
-						<div className="sunset-icon"><Icon.SunsetFill/></div>
-						<div className="sunrise-time">{sunRise.getHours()}:{sunRise.getMinutes()}</div>
-						<div className="sunset-time">{sunSet.getHours()}:{sunRise.getMinutes()}</div>
+						<div className="sunrise-icon">
+							<Icon.Sunrise />
+						</div>
+						<div className="sunset-icon">
+							<Icon.SunsetFill />
+						</div>
+						<div className="sunrise-time">
+							{sunRise.getHours()}:{sunRise.getMinutes()}
+						</div>
+						<div className="sunset-time">
+							{sunSet.getHours()}:{sunRise.getMinutes()}
+						</div>
 					</div>
 					<div className="temp-outline">
 						<Animate
@@ -151,7 +159,7 @@ export class MyWeather extends Component {
 							}}></Animate>
 					</div>
 				</div>
-				<div className="weather-background" style={{backgroundImage:`url("weather-icons/${iconCode}.jpg")`}} ></div>
+				<div className="weather-background" style={{ backgroundImage: `url("weather-bg/${iconCode}.png")` }}></div>
 			</section>
 		);
 	}
