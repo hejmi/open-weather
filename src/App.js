@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import FormInput from "./components/FormInput";
 import MyWeather from "./components/MyWeather";
+import weatherApi from "./weather_api";
 
 export default class App extends Component {
 	getWeather = async (city) => {
 		if (!city) city = "gothenburg";
-		const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+		const apiKey = weatherApi;
 		const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`).then((response) => {
 			if (response.status === 404) {
 				alert("City is not valid");
