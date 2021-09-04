@@ -2,7 +2,10 @@ html {
 	font-size: 16px;
 }
 section {
-	padding: 20px;
+	padding-top: 3rem;
+	padding-left: 4rem;
+	margin: auto;
+	max-width: 400px;
 }
 h1.title {
 	font-size: 2.5rem;
@@ -21,13 +24,16 @@ section p {
 	background-image: url("../temp_outline.png");
 	background-size: 80px;
 	position: absolute;
+	margin: auto;
 	width: 80px;
 	height: 231px;
-	left: 15rem;
-	top: 4rem;
+	left: calc(50% + 3.2rem);
+	top: 6rem;
 }
 .input-city-form {
-	padding-left: 3.3rem;
+	margin: auto;
+	max-width: 400px;
+	padding-left: 7.1rem;
 }
 .input-city-form p {
 	padding: 0;
@@ -39,12 +45,12 @@ section p {
 }
 
 .sun {
-display: grid;
-grid-template-columns: repeat(2, 3rem);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-padding: 1rem 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 3rem);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	padding: 1rem 2rem;
 }
 
 .weather-background {
@@ -52,14 +58,12 @@ padding: 1rem 2rem;
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-x: -800px;
+	background-position-x: 0px;
 	position: absolute;
 	z-index: -10;
 	opacity: 0.2;
-	left:0;
-	top:0;
-
-
+	left: 0;
+	top: 0;
 }
 
 @keyframes weather-animation {
@@ -75,4 +79,3 @@ padding: 1rem 2rem;
 		opacity: 0;
 	}
 }
-
